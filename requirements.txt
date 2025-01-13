@@ -1,0 +1,4 @@
+supabase
+flask
+flask-cors
+python-dotenv
