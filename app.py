@@ -42,8 +42,7 @@ def create_post():
 
         response = supabase.table('posts').insert({
             'content': content,
-            'votes': 0,
-            'timestamp': 'now()'  # Use server timestamp
+            'votes': 0
         }).execute()
 
         if response.error:
