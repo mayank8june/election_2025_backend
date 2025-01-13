@@ -22,8 +22,8 @@ def get_posts():
     """Fetch all posts, sorted by timestamp (newest first)."""
     try:
         response = supabase.table('posts').select('*').order('timestamp', desc=True).execute()
-        if response.error:
-            return jsonify({'message': response.error.message}), 500
+        # if response.error:
+        #     return jsonify({'message': response.error.message}), 500
 
         posts = response.data
         return jsonify(posts), 200
